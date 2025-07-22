@@ -26,7 +26,7 @@
                     <Font name="FreeSerif Bold" size="35.0" />
                 </font>
                 <VBox.margin>
-                    <Insets left="10.0" />
+                    <Insets left="10.0" top="-30.0" />
                 </VBox.margin>
             </Label>
         </children>
@@ -53,15 +53,23 @@
     </HBox>
     <Button fx:id="buttonPlay" alignment="CENTER" prefHeight="36.0" prefWidth="152.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 10px;" text="Play Now!" textAlignment="CENTER">
         <font>
-            <Font name="Monospaced Regular" size="19.0" />
+            <Font name="Monospaced Bold" size="19.0" />
         </font>
         <VBox.margin>
-            <Insets top="20.0" />
+            <Insets />
         </VBox.margin>
     </Button>
     <Button fx:id="buttonInstruction" mnemonicParsing="false" prefHeight="43.0" prefWidth="166.0" style="-fx-background-color: #1465bb; -fx-text-fill: white; -fx-background-radius: 10px;" text="Instructions">
         <font>
-            <Font name="Monospaced Regular" size="19.0" />
+            <Font name="Monospaced Bold" size="19.0" />
         </font>
     </Button>
+   <Label alignment="CENTER" text="1.0" textAlignment="CENTER">
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <VBox.margin>
+         <Insets left="540.0" top="-38.0" />
+      </VBox.margin>
+   </Label>
 </VBox>

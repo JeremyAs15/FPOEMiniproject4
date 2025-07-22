@@ -9,13 +9,13 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
- * Clase principal que inicia la aplicación del juego Naval Battle.
+ * Clase principal que inicia la aplicación del juego.
  */
 public class Main extends Application {
     /**
      * Método principal de inicio de la aplicación JavaFX.
      * Configura la ventana principal y carga la vista inicial.
-     * @param stage El escenario principal proporcionado por JavaFX.
+     * @param stage Escenario principal proporcionado por JavaFX.
      * @throws IOException Si ocurre un error al cargar el archivo FXML.
      */
     @Override
