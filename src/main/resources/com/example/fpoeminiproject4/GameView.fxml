@@ -1,14 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.fpoeminiproject4.Controller.GameController"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<VBox id="baseHBox" fx:id="parentContainer" alignment="CENTER" prefHeight="846.0" prefWidth="1062.0" spacing="30.0"  xmlns="http://javafx.com/javafx/17.0.6fga" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fpoeminiproject4.Controller.GameController">
+    <children>
+        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="1097.0" spacing="50.0">
+            <children>
+                <VBox id="userBaseHBox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="575.0" prefWidth="420.0">
+                    <children>
+                        <Label id="yourShips" fx:id="labelPlayerName" text="Your name" />
+                        <Label id="descriptionLabel" fx:id="descriptionLabel">
+                            <VBox.margin>
+                                <Insets top="30.0" />
+                            </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="58.0" prefWidth="380.0" spacing="10">
+                            <children>
+                                <Button id="horizontalBtn" fx:id="horizontalBtn" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="49.0" prefWidth="169.0" text="Horizontal">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </Button>
+                                <Button id="verticalBtn" fx:id="verticalBtn" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="49.0" prefWidth="169.0" text="Vertical">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                            <VBox.margin>
+                                <Insets top="35.0" />
+                            </VBox.margin>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox id="machineBaseHBox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="575.0" prefWidth="420.0">
+                    <children>
+                        <Label id="machinesShips" text="Machine" />
+                        <HBox fx:id="revealShipsContainer" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="44.0" prefWidth="425.0">
+                            <children>
+                                <Button id="revealShips" fx:id="revealShips" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="42.0" prefWidth="153.0" text="Reveal board" />
+                            </children>
+                            <VBox.margin>
+                                <Insets top="80.0" />
+                            </VBox.margin>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <GridPane id="selectionGrid" fx:id="selectionGrid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="493.0" prefWidth="102.0" rotate="270.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="134.0" minWidth="10.0" prefWidth="67.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="72.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="143.0" minHeight="10.0" prefHeight="55.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="298.0" minHeight="10.0" prefHeight="93.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="260.0" minHeight="10.0" prefHeight="137.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="218.0" minHeight="10.0" prefHeight="178.0" valignment="CENTER" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label fx:id="destroyerCounter" rotate="90.0" styleClass="shipCounter" text="x3" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label fx:id="frigateCounter" rotate="90.0" styleClass="shipCounter" text="x4" GridPane.columnIndex="1" />
+                <Label fx:id="submarineCounter" rotate="90.0" styleClass="shipCounter" text="x2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label fx:id="aircraftCounter" rotate="90.0" styleClass="shipCounter" text="x1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            </children>
+            <padding>
+                <Insets left="20.0" top="30.0" />
+            </padding>
+            <VBox.margin>
+                <Insets left="-470.0" top="-210.0" />
+            </VBox.margin>
+        </GridPane>
+        <Label id="messageLabel" fx:id="messageLabel" visible="false">
+            <VBox.margin>
+                <Insets top="-200.0" />
+            </VBox.margin>
+        </Label>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+                <Button id="startGame" fx:id="startGame" alignment="CENTER" contentDisplay="CENTER" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"     prefHeight="43.0" prefWidth="142.0" text="Start Game">
+                    <HBox.margin>
+                        <Insets bottom="10.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+</VBox>

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="baseVBox" alignment="TOP_CENTER" fillWidth="false" prefHeight="438.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fpoeminiproject4.Controller.StartController">
+<VBox fx:id="baseVBox" alignment="TOP_CENTER" fillWidth="false" prefHeight="438.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fpoeminiproject4.Controller.StartController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -51,7 +51,7 @@
             </HBox.margin></TextField>
         </children>
     </HBox>
-    <Button fx:id="buttonPlay" alignment="CENTER" prefHeight="36.0" prefWidth="152.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 10px;" text="Play Now!" textAlignment="CENTER">
+    <Button fx:id="buttonPlay" alignment="CENTER" onAction="#onPlayButton" prefHeight="36.0" prefWidth="152.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 10px;" text="Play Now!" textAlignment="CENTER">
         <font>
             <Font name="Monospaced Bold" size="19.0" />
         </font>
@@ -59,7 +59,7 @@
             <Insets />
         </VBox.margin>
     </Button>
-    <Button fx:id="buttonInstruction" mnemonicParsing="false" prefHeight="43.0" prefWidth="166.0" style="-fx-background-color: #1465bb; -fx-text-fill: white; -fx-background-radius: 10px;" text="Instructions">
+    <Button fx:id="buttonInstruction" mnemonicParsing="false" onAction="#OnInstructionsButton" prefHeight="43.0" prefWidth="166.0" style="-fx-background-color: #1465bb; -fx-text-fill: white; -fx-background-radius: 10px;" text="Instructions">
         <font>
             <Font name="Monospaced Bold" size="19.0" />
         </font>
