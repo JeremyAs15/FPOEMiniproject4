@@ -21,10 +21,10 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("StartView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/fpoeminiproject4/StartView.fxml"));
         Parent root = loader.load();
 
-        stage.setTitle("Naval Battle");
+        stage.setTitle("Battle Ship Game");
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setResizable(false);
