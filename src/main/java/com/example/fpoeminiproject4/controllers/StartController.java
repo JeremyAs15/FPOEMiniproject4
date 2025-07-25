@@ -1,6 +1,6 @@
-package com.example.fpoeminiproject4.Controller;
+package com.example.fpoeminiproject4.controllers;
 
-import com.example.fpoeminiproject4.View.GameView;
+import com.example.fpoeminiproject4.views.GameView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -46,13 +46,12 @@ public class StartController {
             alert.showAndWait();
         } else {
             Node source = (Node) event.getSource();
-            Stage actualStage = (Stage) source.getScene().getWindow();
-            actualStage.close();
+            Stage currentStage = (Stage) source.getScene().getWindow();
+            currentStage.close();
 
             GameView gameView = GameView.getInstance();
+            gameView.getGameController().setPlayerName(inputUsername.getText());
             gameView.show();
-            GameController gameController = gameView.getGameController();
-            gameController.initialize(inputUsername.getText());
         }
     }
 }

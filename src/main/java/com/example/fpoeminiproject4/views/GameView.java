@@ -1,6 +1,6 @@
-package com.example.fpoeminiproject4.View;
+package com.example.fpoeminiproject4.views;
 
-import com.example.fpoeminiproject4.Controller.GameController;
+import com.example.fpoeminiproject4.controllers.GameController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -9,33 +9,27 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class GameView extends Stage {
-    private final GameController gameController;
+    private static GameView instance;
+    private GameController gameController;
 
-    public GameView() throws IOException {
+    private GameView() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/fpoeminiproject4/GameView.fxml"));
         Parent root = loader.load();
-        this.setTitle("Battle Ship Game");
         this.gameController = loader.getController();
-        Scene scene = new Scene(root);
-
-        this.setScene(scene);
+        this.setScene(new Scene(root));
+        this.setTitle("Battle Ship Game");
         this.setResizable(false);
-        this.show();
-    }
-
-    private static class GameViewHolder {
-        private static GameView INSTANCE;
     }
 
     public static GameView getInstance() throws IOException {
-        if (GameViewHolder.INSTANCE == null) {
-            return GameViewHolder.INSTANCE = new GameView();
-        } else {
-            return GameViewHolder.INSTANCE;
+        if (instance == null) {
+            instance = new GameView();
         }
+        return instance;
     }
 
     public GameController getGameController() {
         return gameController;
     }
 }
+

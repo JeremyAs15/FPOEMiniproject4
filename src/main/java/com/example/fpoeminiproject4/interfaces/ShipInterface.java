@@ -1,6 +1,6 @@
 package com.example.fpoeminiproject4.interfaces;
 
-public interface shipInterface {
+public interface ShipInterface {
     int getShipSize();
     void setShipSize(int shipAmount);
     int getShipType();
