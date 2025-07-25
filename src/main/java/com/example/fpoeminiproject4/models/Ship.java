@@ -1,7 +1,7 @@
-package com.example.fpoeminiproject4.Model;
-import com.example.fpoeminiproject4.interfaces.shipInterface;
+package com.example.fpoeminiproject4.models;
+import com.example.fpoeminiproject4.interfaces.ShipInterface;
 
-public class Ship implements shipInterface {
+public class Ship implements ShipInterface {
     int shipSize;
     int shipType;
     int shipAmount;

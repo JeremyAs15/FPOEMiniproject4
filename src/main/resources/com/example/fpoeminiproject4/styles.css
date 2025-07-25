@@ -1,0 +1,15 @@
+.userCell {
+    -fx-background-color: #B0E0E6; /* Azul claro */
+    -fx-border-color: #4682B4;
+    -fx-border-width: 1px;
+}
+
+.machineCell {
+    -fx-background-color: #F5F5F5; /* Gris claro */
+    -fx-border-color: #A9A9A9;
+    -fx-border-width: 1px;
+}
+
+.game-grid {
+    -fx-padding: 5px;
+}
