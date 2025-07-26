@@ -23,7 +23,6 @@ public class Main extends Application {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/fpoeminiproject4/StartView.fxml"));
         Parent root = loader.load();
-
         stage.setTitle("Battle Ship Game");
         Scene scene = new Scene(root);
         stage.setScene(scene);

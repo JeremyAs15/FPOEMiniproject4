@@ -50,7 +50,7 @@ public class StartController {
             currentStage.close();
 
             GameView gameView = GameView.getInstance();
-            gameView.getGameController().setPlayerName(inputUsername.getText());
+            gameView.getGameController().initializeNewGame(inputUsername.getText());
             gameView.show();
         }
     }
