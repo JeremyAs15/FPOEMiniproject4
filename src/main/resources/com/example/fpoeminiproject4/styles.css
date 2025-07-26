@@ -1,15 +1,153 @@
-.userCell {
-    -fx-background-color: #B0E0E6; /* Azul claro */
-    -fx-border-color: #4682B4;
-    -fx-border-width: 1px;
+#baseHBox {
+    -fx-background-color: whitesmoke;
 }
 
-.machineCell {
-    -fx-background-color: #F5F5F5; /* Gris claro */
-    -fx-border-color: #A9A9A9;
-    -fx-border-width: 1px;
+#userBaseHBox, #machineBaseHBox {
+    -fx-padding: 20px 20px 10px 20px;
 }
 
-.game-grid {
-    -fx-padding: 5px;
+#userBaseHBox {
+    -fx-background-color: whitesmoke;
+    -fx-background-radius: 30px;
+}
+
+#machineBaseHBox {
+    -fx-background-color: whitesmoke;
+    -fx-background-radius: 30px;
+}
+
+.sunk-ship {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.sunk-ship .path {
+    -fx-fill: #555555;
+    -fx-stroke: #333333;
+}
+
+#machineBaseGrid {
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+    -fx-border-radius: 10px;
+
+}
+
+#userBaseGrid {
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+    -fx-border-radius: 10px;
+}
+
+#yourFleet, #machinesFleet{
+    -fx-font-size: 2.5em;
+}
+
+.userCell, .machineCell{
+    -fx-border-color: gray;
+    -fx-border-width: 0.5px;
+    -fx-max-height: 38px;
+    -fx-max-width: 38px;
+}
+
+.userCell:hover{
+    -fx-background-color: #ededed;
+    -fx-cursor: hand;
+}
+
+#yourFleet {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+#machinesFleet {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+#rotateShip, #revealFleet, #startGame, #hideButton {
+    -fx-font-size: 1.7em;
+    -fx-background-radius: 16px;
+}
+
+#rotateShip {
+    -fx-background-color: #edeae4;
+    -fx-text-fill: #274154;
+}
+
+#revealFleet, #startGame, #hideButton {
+    -fx-background-color: #1465bb;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+#revealFleet:hover, #startGame:hover, #hideButton:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #35648a;
+}
+
+.tooltip {
+    -fx-font-size: 1.1em;
+    -fx-background-color: #a69f9f;
+    -fx-text-fill: #000;
+}
+
+.ship:hover {
+    -fx-cursor: hand;
+    -fx-opacity: 0.8;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+#selectionGrid {
+    -fx-background-color: #666666;
+    -fx-font-weight: bold;
+    -fx-background-radius: 16px;
+}
+
+.shipCounter {
+    -fx-font-size: 1.3em;
+    -fx-text-fill: #fff;
+}
+
+#messageLabel {
+    -fx-font-size: 1.3em;
+    -fx-text-fill: black;
+}
+
+
+#descriptionLabel {
+    -fx-font-size: 1.1em;
+    -fx-text-fill: black;
+}
+
+#horizontalBtn, #verticalBtn {
+    -fx-font-size: 1.7em;
+    -fx-background-radius: 16px;
+    -fx-background-color: #1465bb;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.orientation-button {
+    -fx-font-size: 1.7em;
+    -fx-background-radius: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.orientation-button-selected {
+    -fx-background-color: #1465bb;
+    -fx-opacity: 1.0;
+}
+
+.orientation-button-unselected {
+    -fx-background-color: #7aa3cc;
+    -fx-opacity: 0.5;
+}
+
+.orientation-button:disabled {
+    -fx-background-color: #7aa3cc;
+    -fx-opacity: 0.5;
 }
